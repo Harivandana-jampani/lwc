@@ -1,0 +1,17 @@
+<template>
+    <ul>
+    <!--<template for:each={cars} for:item="car" >
+        <li key={car.Id}>{car.name} is a {car.color} car </li>
+    </template>-->
+
+    <template iterator:it={cars}>
+        <li key={it.value.id}>
+            <div if:true={it.first}>Starting</div>
+            {it.value.name}
+            {it.value.color}
+            <div if:true={it.last}>Ending</div>
+
+        </li>
+    </template>
+</ul>
+</template>
