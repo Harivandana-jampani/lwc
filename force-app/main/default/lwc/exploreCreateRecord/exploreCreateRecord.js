@@ -6,34 +6,38 @@ import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 export default class ExploreCreateRecord extends LightningElement {
     name = '';
     handleChange(event){
-        this.name=event.target.value;
+        this.name = event.target.value;
     }
     handleClick(){
-        const fields= {};
-        fields[Name_Field.fieldApiName]=this.name;
+        const fields = {};
+
+        fields[Name_Field.fieldApiName] = this.name;
+
         const recordInput = {
             apiName: Account_Object.objectApiName,
             fields
-        }
+        };
         createRecord(recordInput)
             .then(account => {
                 this.dispatchEvent(
                     new ShowToastEvent({
                     title: 'Success!!',
                     message: account.id,
-                    varient: 'success'
+                    variant: 'success'
                 })
-            )
+            );
+
             })
             .cactch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
                     title:'Error!!',
                     message:error.body.message,
-                    varient:'error'
+                    variant:'error'
                 })
-            )
-            })
+            );
+
+            });
         
     }
 }
