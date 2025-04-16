@@ -2,8 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>exploreContactController</members>
+         <members>invokeApexMethod</members>
         <name>Apexclass</name>
-    </types>
-    
+    </types> 
     <version>63.0</version>
 </Package>

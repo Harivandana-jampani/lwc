@@ -1,0 +1,9 @@
+<template>
+    <template if:true={Acc.data}>
+        <template for:each={Acc.data} for:item="accs">
+         <p key={accs.Id}>{accs.Name}</p>
+        </template>
+        <template if:true={Acc.error}>
+        </template>
+    </template>
+</template>
