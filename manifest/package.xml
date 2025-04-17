@@ -5,6 +5,7 @@
          <members>invokeApexMethod</members>
         <members>invokeApexWithFunction</members>
         <members>passingParameterstoApex</members>
+        <members>invokeApexmethodImperatively</members>
         <name>Apexclass</name>
     </types> 
     <version>63.0</version>

@@ -1,0 +1,10 @@
+<template>
+    <template if:true={accounts}>
+        <template for:each={accounts} for:item="Account">
+            <p key={Account.Id}>{Account.Name}</p>
+        </template>
+        <template if:true={error}>
+
+        </template>
+    </template>
+</template>
