@@ -3,6 +3,8 @@
     <types>
         <members>exploreContactController</members>
          <members>invokeApexMethod</members>
+        <members>invokeApexWithFunction</members>
+        <members>passingParameterstoApex</members>
         <name>Apexclass</name>
     </types> 
     <version>63.0</version>
