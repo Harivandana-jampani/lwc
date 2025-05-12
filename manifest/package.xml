@@ -6,10 +6,6 @@
         <members>invokeApexWithFunction</members>
         <members>passingParameterstoApex</members>
         <name>Apexclass</name>
-    </types> 
-    <types>
-    <members>*</members>
-        <name>LightningMessageChannel</name>
-    </types> 
+    </types>
     <version>63.0</version>
 </Package>
