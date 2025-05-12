@@ -7,5 +7,9 @@
         <members>passingParameterstoApex</members>
         <name>Apexclass</name>
     </types> 
+    <types>
+    <members>*</members>
+        <name>LightningMessageChannel</name>
+    </types> 
     <version>63.0</version>
 </Package>
