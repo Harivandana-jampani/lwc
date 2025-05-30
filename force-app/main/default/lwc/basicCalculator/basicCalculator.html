@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-box" style="width:30%">
+<lightning-input type="number" value={firstInput} onchange={firstInputChange} name="First Number" placeholder="Enter First Number"></lightning-input>  
+<lightning-input type="number" value={secondInput} onchange={secondInputChange} name="second Number" placeholder="Enter Second Number"></lightning-input>
+<div class="slds-p-top_small">
+<lightning-button-group>
+    <lightning-button  variant="brand" label="Add" title="Add" onclick={add}></lightning-button>
+    <lightning-button  variant="brand" label="Sub" title="Sub" onclick={sub}></lightning-button>
+    <lightning-button  variant="brand" label="Mul" title="Mul" onclick={mul}></lightning-button>
+    <lightning-button  variant="brand" label="Div" title="Division" onclick={div}></lightning-button>
+</lightning-button-group>
+</div>
+<template if:true={showResult}>
+    <div class="slds-box slds-theme_shade">
+        <p>the total result is {totalResult}</p>
+    </div>
+</template>
+</div>
+</template>
