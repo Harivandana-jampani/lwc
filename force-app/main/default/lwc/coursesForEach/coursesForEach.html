@@ -1,0 +1,8 @@
+<template>
+    <div class="slds-m">
+        <ul>
+        <template for:each={allCourseDetails} for:item="course">
+            <li key ={course.courseName}> This course {course.courseName} is completed in {course.courseDetails}</li></template>
+        </ul>
+    </div>
+</template>

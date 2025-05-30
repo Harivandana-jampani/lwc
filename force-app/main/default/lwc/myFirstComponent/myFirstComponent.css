@@ -1,0 +1,24 @@
+.tablecls{
+    width: 100%;
+    border-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-collapse:collapse ;
+}
+.tablecls td,
+.tablecls th{
+    border: 1px solid black;
+    padding: 8px;
+}
+.tablecls th{
+    padding-top : 12px;
+    padding-bottom: 12px;
+    text-align : center;
+    background-color: deeppink;
+    color: cornsilk;
+}
+.tablecls tr:hover{
+    background-color: blue;
+}
+.tablecls tr:nth-child(even){
+    background-color: aqua;
+}
