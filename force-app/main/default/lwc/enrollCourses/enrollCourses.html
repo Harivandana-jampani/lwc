@@ -1,6 +1,6 @@
 <template>
     <lightning-card title={courseDetailInfo.courseName}>
-        <lightning-button label="Enroll" slot="actions"></lightning-button>
+        <lightning-button label="Enroll" slot="actions" onclick={navigateToCourse}></lightning-button>
         <div class="slds-text-heading_small">
             <ul>
                 <li>Course Duration:{courseDetailInfo.courseDuration}</li>
