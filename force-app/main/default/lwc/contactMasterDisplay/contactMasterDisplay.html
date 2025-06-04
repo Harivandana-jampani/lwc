@@ -1,10 +1,15 @@
 <template>
     <div class="slds-box maindiv">
+        <lightning-combobox name="accountList" label="Select Account to get All Contacts"
+        placeholder="Choose Account Name" value={selectedAccount}
+        options={accountOptions}
+        onchange={accountNameChange}></lightning-combobox>
     <template if:true={contacts.data}>
         <div class="slds-grid slds-wrap slds-gutters">
             <template for:each={contacts.data} for:item="con">
                 <div class="slds-col slds-size_1-of-3  slds-p-around_small" key={con.Id}>
-                    <lightning-card title={con.Account.Name}>
+                   <lightning-card title={con.Account.Name}>
+
                         <lightning-button value={con.Id} name={con.Id} label="view Details"  onclick={NavigateToDetails} variant="Success" slot="actions"> </lightning-button>
                             <p class="slds-p-horizontal_small">{con.Name}</p>
                             <p class="slds-p-horizontal_small">{con.Email}</p>

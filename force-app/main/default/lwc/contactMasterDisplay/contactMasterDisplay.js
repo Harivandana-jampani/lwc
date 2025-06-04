@@ -1,9 +1,28 @@
 import { LightningElement ,wire} from 'lwc';
 import fetchAllContacts from '@salesforce/apex/ContactManager.fetchAllContacts';
 import {NavigationMixin} from 'lightning/navigation';
+import getAllAccounts from '@salesforce/apex/ContactManager.getAllAccounts';
 export default class ContactMasterDisplay extends NavigationMixin(LightningElement) {
-     
-    @wire(fetchAllContacts) contacts;
+     selectedAccount;
+     accountOptions=[];
+     errorDetails;
+     @wire(getAllAccounts)
+        accountProcess({error,data}){
+            if(data){
+                this.errorDetails=undefined;
+                for(var i=0;i<data.length;i++){
+                    this.accountOptions= [...this.accountOptions,{value:data[i].Id,label:data[i].Name}];
+                }
+            }
+            else if(error){
+                this.data=undefined;
+                this.errorDetails = error;
+            }
+     }
+     accountNameChange(event){
+        this.selectedAccount =event.detail.value;
+     }
+    @wire(fetchAllContacts,{accountId:'$selectedAccount'}) contacts;
     contactId; 
     NavigateToDetails(event){
          this.contactId = event.target.value;
