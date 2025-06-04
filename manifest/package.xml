@@ -7,6 +7,8 @@
         <members>passingParameterstoApex</members>
         <members>ContactManager</members>
         <members>PropertyDetails</members>
+        <members>DoctorDetails</members>
+        <members>caseManager</members>
         <name>Apexclass</name>
     </types>
     <version>63.0</version>
