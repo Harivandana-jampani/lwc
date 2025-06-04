@@ -5,6 +5,7 @@
          <members>invokeApexMethod</members>
         <members>invokeApexWithFunction</members>
         <members>passingParameterstoApex</members>
+        <members>ContactManager</members>
         <members>PropertyDetails</members>
         <name>Apexclass</name>
     </types>

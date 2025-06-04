@@ -7,10 +7,10 @@ export default class NavigateToAccountListView extends NavigationMixin(Lightning
             attributes:{
                 objectApiName:'Account',
                 actionName : 'list'
-        }
-    });
+        },
     state:{
-        filterName : 'Recent'
+        filterName : 'MyAccounts'
     }
+});
 }
 }
