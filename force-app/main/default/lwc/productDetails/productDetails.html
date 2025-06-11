@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-box">
+        <lightning-button title="Products" label="Details"></lightning-button>
+   
+        <template for:each={prodresult} for:item="prod">
+            <div class="slds-col slds-size_1-of-3 slds-p-around_small" key={prod.Id}>
+                 
+       
+            <p>name:{prod.Id}</p>
+            <p>familyGroup:{prod.Family}</p>
+    
+    </div>
+        </template>
+        
+    </div>
+</template>

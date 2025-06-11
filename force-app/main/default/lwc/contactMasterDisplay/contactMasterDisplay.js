@@ -12,7 +12,7 @@ export default class ContactMasterDisplay extends NavigationMixin(LightningEleme
                 this.errorDetails=undefined;
                 for(var i=0;i<data.length;i++){
                     this.accountOptions= [...this.accountOptions,{value:data[i].Id,label:data[i].Name}];
-                }
+                }// nosure
             }
             else if(error){
                 this.data=undefined;
@@ -22,7 +22,7 @@ export default class ContactMasterDisplay extends NavigationMixin(LightningEleme
      accountNameChange(event){
         this.selectedAccount =event.detail.value;
      }
-    @wire(fetchAllContacts,{accountId:'$selectedAccount'}) contacts;
+    @wire(fetchAllContacts,{accountId:'$selectedAccount'}) contacts; // null 
     contactId; 
     NavigateToDetails(event){
          this.contactId = event.target.value;

@@ -1,0 +1,8 @@
+<template>
+    <div class="slds-box" style="background-color:coral">
+        <lightning-input label="enter case comment" type="text" name="caseCmnt" required onchange={handleChange}></lightning-input>
+    </div>
+    <div class ="slds-align_absolute-center">
+        <lightning-button label="Add Comment" onclick={createCaseComment} variant="success"></lightning-button>
+    </div>
+</template>
