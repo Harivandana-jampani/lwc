@@ -9,4 +9,18 @@ public with sharing class caseManager {
             return Null;
         }
     }
+    @AuraEnabled
+    public static string closeCase(string caseId){
+        string message;
+        try{
+            case cs= new case(Id=caseId);
+            cs.status='Closed';
+            update cs;
+            message='Success';
+        }
+        catch(Exception ex){
+            message = ex.getMessage();
+        }
+        return message;
+    }
 }

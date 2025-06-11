@@ -9,6 +9,8 @@
         <members>PropertyDetails</members>
         <members>DoctorDetails</members>
         <members>caseManager</members>
+        <members>ProductsManager</members>
+        <members>CaseCommentManager</members>
         <name>Apexclass</name>
     </types>
     <version>63.0</version>
