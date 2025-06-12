@@ -7,8 +7,9 @@ export default class CaseManager extends LightningElement {
    errorDetails;
    showCaseComment;
    caseCloseMessage;
+   //showCaseComment= false;
    caseNumberChange(event){
-    this.showCaseComment= false;
+    this.showCaseComment=false;
     this.searchCaseNumber=event.target.value;
     fetchCaseDetails({caseNumber:this.searchCaseNumber})
     .then(result=>{

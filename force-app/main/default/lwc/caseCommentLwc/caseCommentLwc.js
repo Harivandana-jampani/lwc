@@ -2,11 +2,13 @@ import { api, LightningElement } from 'lwc';
 import addCaseComment from '@salesforce/apex/CaseCommentManager.addCaseComment';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 export default class CaseCommentLwc extends LightningElement {
-    caseRecordId;
+   @api caseRecordId;
     caseCommentBody;
     @api
     setCaseRecordId(cid){
         this.caseRecordId = cid;
+         console.log('this.caserecordId'+this.caseRecordId);
+
     }
     handleChange(event){
         if(event.target.name =='caseCmnt'){

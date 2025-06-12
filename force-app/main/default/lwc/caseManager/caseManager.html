@@ -12,7 +12,7 @@
                                 </template>
                                 <template if:false={eachCase.IsClosed}>
                                     <lightning-button variant="success" name={eachCase.Id} value={eachCase.Id} label="Close Case" onclick={passCaseToClose}></lightning-button>
-                                      <lightning-button variant="success" name={eachCase.Id} value={eachCase.Id} label="New Comment" onclick={newCommentAdd}></lightning-button>
+                                     > <lightning-button variant="success" name={eachCase.Id} value={eachCase.Id} label="New Comment" onclick={newCommentAdd}></lightning-button>
                                 </template>
                             </div>
                           <p class="slds-p-horizontal_small">
@@ -34,7 +34,7 @@
             </div>
             </template>
             
-            <c-case-comment-lwc></c-case-comment-lwc>
-            
+            <c-case-comment-lwc></c-case-comment-lwc> 
+         
     </div>
 </template>
