@@ -11,6 +11,9 @@
         <members>caseManager</members>
         <members>ProductsManager</members>
         <members>CaseCommentManager</members>
+        <members>styleDataTableController</members>
+        <members>AccountContactWrapper</members>
+        <members>AccountDetailCls</members>
         <name>Apexclass</name>
     </types>
     <version>63.0</version>
