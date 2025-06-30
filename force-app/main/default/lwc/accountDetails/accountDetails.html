@@ -1,0 +1,52 @@
+<template>
+    <template if:true={visibleRecords}>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr class = "slds-line-height_reset">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Account Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Type">Account Type</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Number of Cases">Number of Cases</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Number of Contacts">Number of Contacts</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Number of Opportunities">Number of Opportunities</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={totalRecords} for:item="eachRec">
+                    <tr class="slds-hont-parent" key={eachRec.Id}>
+                        <td data-label="Account Name">
+                            <div class = "slds-truncate" title={eachRec.accName}>{eachRec.accName}</div>
+                        </td>
+                        <td data-label="Account Type">
+                            <div class = "slds-truncate" title={eachRec.accType}>{eachRec.accType}</div>
+                        </td>
+                        <td data-label="Number of cases">
+                            <div class = "slds-truncate" title={eachRec.totalCases}>{eachRec.totalCases}</div>
+                        </td>
+                        <td data-label="Number of Contacts">
+                            <div class = "slds-truncate" title={eachRec.totalContacts}>{eachRec.totalContacts}</div>
+                        </td>
+                        <td data-label="Number of Opportunities">
+                            <div class = "slds-truncate" title={eachRec.totalOpportunities}>{eachRec.totalOpportunities}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </template>
+    <template if:false={visibleRecords}>
+        <strong>There is no Account records to Display</strong>
+    </template>
+    <div slot="footer" class="slds-var-m-vertical_medium">
+        <c-smart-pagination records={totalRecords} onpagination={updateRecordHandler} record-size ="6"></c-smart-pagination>
+    </div>
+</template>
