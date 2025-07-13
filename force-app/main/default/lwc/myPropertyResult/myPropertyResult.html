@@ -1,3 +1,87 @@
 <template>
-    
+    <template if:true={propertiesFound}>
+        <lightning-layout multiple-rows>
+            <template for:each={properties} for:item="prop">
+                <lightning-layout-item size="6" key={prop.Id} padding="around-small">
+                    <lightning-layout multiple-rows>
+                        <div class="slds-box" style="width:100%; background-color:#ffffff;">
+                            <lightning-layout>
+                                <lightning-layout-item size="6" padding="around-small">
+                                    <lightning-formatted-rich-text value={prop.Property_Main_Image__c}></lightning-formatted-rich-text>
+                                </lightning-layout-item>
+                             <lightning-layout-item size="6" padding="around-small">
+                                <lightning-card title={prop.Furnished_Type__c}>
+                                    <lightning-layout-item style="color:red" size="12" padding="around-small" small-device-size="6" medium-device-size="6" large-device-size="6">
+                                        INR:{prop.Rent__c}</br>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="around-small" size="12" small-device-size="6" medium-device-size="6" large-device-size="6">
+                                        {prop.No_of_Bed_Room__c}BHK House for rent {prop.Covered_area_sqft__c} sqft</br>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="around-small" size="12" small-device-size="6" medium-device-size="6" large-device-size="6">
+                                      {prop.Area__c}</br>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item  padding="around-small" size="12" small-device-size="6" medium-device-size="6" large-device-size="6">
+                                    {prop.No_of_Bed_Room__c} Room {prop.No_of_Bath_Room__c} BathRoom {prop.Furnished_Type__c}</br>
+                                    </lightning-layout-item>
+                                </lightning-card>
+                                <div class="slds-p-top_small">
+                                    <lightning-button-group>
+                                        <lightning-button variant="success" label="Owner Details" class="slds-m_x-small"
+                                        value={prop.Property_Owner__c} onclick={ownerDetailsClick}></lightning-button>
+                                         <lightning-button variant="success" label="Enquirey" class="slds-m_x-small"
+                                        value={prop.Id} onclick={ownerEnquireyclick}></lightning-button>
+                                         <lightning-button variant="success" label="Property Details" class="slds-m_x-small"
+                                        value={prop.Id} onclick={navigateToPropDetails}></lightning-button>
+                                </lightning-button-group>
+                                </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                    </lightning-layout>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+
+    </template>
+    <template if:false={propertiesFound}>
+        <div class="slds-align_absolute-center" style="color:aqua">
+            No Properties defined. please stay tune for listing out the properties soon....
+        </div>
+    </template>
+
+    <!--Owmer details section start-->
+    <template if:true={isOpenOwnerDetails}>
+        <div style="margin-top:10%">
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning-card title="property Owner Details" icon-name="standard:people">
+                            <lightning-button-icon class="slds-model__close" icon-name="utility:close"
+                            onclick={closeOwnerModel}></lightning-button-icon>
+                        </lightning-card>
+                    </header>
+                    <div class="slds-modal__content slds-p-around-medium">
+                        <c-my-property-owner property-owner-id={propOwnerId}></c-my-property-owner>
+                    </div>       
+                </div>
+            </section>
+        </div>
+    </template>
+
+        <!--property enquirey details section start-->
+    <template if:true={feedBackDetails}>
+        <div style="margin-top:10%">
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                            <lightning-button-icon class="slds-model__close" icon-name="utility:close"
+                            onclick={closeEnquireyModel}></lightning-button-icon>
+                    </header>
+                    <div class="slds-modal__content slds-p-around-medium">
+                        <c-my-property-enquirey property-id={feedbackPropertyid} object-api-name="Property_Enquiry__c"></c-my-property-enquirey>
+                    </div>    
+                </div>
+            </section>
+        </div>
+    </template>
 </template>

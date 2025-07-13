@@ -1,0 +1,99 @@
+<template>
+    <template if:true={propertyFound}>
+        <lightning-layout multiple-rows style="background-color:azure; padding: 1rem;">
+
+            <!-- 🔶 Property Description -->
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-formatted-rich-text 
+                    value={property.Property_Description__c}
+                    style="color:brown; font-weight:bold;">
+                </lightning-formatted-rich-text>
+            </lightning-layout-item>
+
+            <!-- 🔷 Main Row -->
+            <lightning-layout>
+
+                <!-- 🖼️ Left: Image -->
+                <lightning-layout-item size="4" padding="around-small">
+                    <lightning-formatted-rich-text 
+                        value={property.Property_Main_Image__c}
+                        style="max-width:100%; height:auto;">
+                    </lightning-formatted-rich-text>
+                </lightning-layout-item>
+
+                <!-- 📋 Right: Fields -->
+                <lightning-layout-item size="8" padding="around-small">
+
+                    <!-- 🔹 Row 1 -->
+                    <lightning-layout>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">BedRooms</p>
+                            <p>{property.No_of_Bed_Room__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">BathRooms</p>
+                            <p>{property.No_of_Bath_Room__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Facing</p>
+                            <p>{property.Facing__c}</p>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <div class="line-break"></div>
+
+                    <!-- 🔹 Row 2 -->
+                    <lightning-layout>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Maintenance Charge</p>
+                            <p>{property.Maintenance_Charge__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Covered Area</p>
+                            <p>{property.Covered_area_sqft__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Furnished</p>
+                            <p>{property.Furnished_Type__c}</p>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <div class="line-break"></div>
+
+                    <!-- 🔹 Row 3 -->
+                    <lightning-layout>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">No of Balcony</p>
+                            <p>{property.No_of_Balcony__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Street</p>
+                            <p>{property.Street__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Location</p>
+                            <p>{property.Area__c}</p>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <div class="line-break"></div>
+
+                    <!-- 🔹 Row 4 -->
+                    <lightning-layout>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Rent</p>
+                            <p>{property.Rent__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Water Availability</p>
+                            <p>{property.Water_Availability__c}</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <p class="field-title">Country</p>
+                            <p>{property.Country__c}</p>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <div class="line-break"></div>
+
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout>
+    </template>
+</template>
