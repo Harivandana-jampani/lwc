@@ -14,7 +14,12 @@
         <members>styleDataTableController</members>
         <members>AccountContactWrapper</members>
         <members>AccountDetailCls</members>
+        <members>ContactController</members>
         <name>Apexclass</name>
-    </types>
+        </types>
+    <types>
+    <members>MyProperty360View</members>
+    <name>AuraDefinitionBundle</name>
+</types>
     <version>63.0</version>
 </Package>

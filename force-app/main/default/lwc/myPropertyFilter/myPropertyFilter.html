@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout multiple-rows style="background-color: aquamarine;">
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+                <lightning-combobox label="Locality" variant="label-stacked"
+                field-level-help="Search Property based on Locality" value={location} options={locationOptions} onchange={handleLocationChange}>
+            </lightning-combobox>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+                <lightning-combobox label="No of BedRooms" variant="label-stacked"
+                field-level-help="Search Property based on BedRooms" value={noOfBedRooms} options={bedRoomOptions} onchange={handleBedRoomChange}>
+            </lightning-combobox>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+                <lightning-combobox label="No of BathRooms" variant="label-stacked"
+                field-level-help="Search Property based on BathRooms" value={noOfBathRooms} options={bathRoomOptions} onchange={handleBathRoomChange}>
+            </lightning-combobox>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+                <lightning-input type="number" value={maxBudget} field-level-help="Search Property based on BedRooms" name="maxBudget" label="Maximum Budget" placeholder="Enter maximum Budget" onchange={handleBudgetChange}>
+                </lightning-input>
+        </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
