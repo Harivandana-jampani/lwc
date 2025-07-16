@@ -4,7 +4,7 @@ export default class ChildComponentList extends LightningElement {
     handleChange(event){
     const msg=event.target.value;
 
-  const custEvent = new CustomEvent('handlecustomevent',{detail:msg});
+  const custEvent = new CustomEvent('handlecustomevent',{detail:msg,bubbles:true});
   this.dispatchEvent(custEvent);
  }
 }

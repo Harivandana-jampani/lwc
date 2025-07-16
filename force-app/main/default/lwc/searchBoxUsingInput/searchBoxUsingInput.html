@@ -1,0 +1,12 @@
+<template>
+    <lightning-input value={searchId} onchange={handleSearchId}></lightning-input>
+    <template if:true={contacts}>
+        <lightning-datatable key-field="Id" data={contacts} columns={columns} hide-checkbox-column="true">
+
+        </lightning-datatable>
+    </template>
+    <template if:false={contacts}>
+        {errorDetails}
+    </template>
+
+</template>

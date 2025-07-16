@@ -15,6 +15,7 @@
         <members>AccountContactWrapper</members>
         <members>AccountDetailCls</members>
         <members>ContactController</members>
+        <members>ContactSearch</members>
         <name>Apexclass</name>
         </types>
     <types>
