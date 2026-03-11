@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>exploreContactController</members>
-         <members>invokeApexMethod</members>
-        <members>invokeApexWithFunction</members>
-        <members>passingParameterstoApex</members>
-        <members>ContactManager</members>
-        <members>PropertyDetails</members>
-        <members>DoctorDetails</members>
-        <members>caseManager</members>
-        <members>ProductsManager</members>
-        <members>CaseCommentManager</members>
-        <members>styleDataTableController</members>
-        <members>AccountContactWrapper</members>
-        <members>AccountDetailCls</members>
-        <members>ContactController</members>
-        <members>ContactSearch</members>
-        <name>Apexclass</name>
-        </types>
-    <types>
-    <members>MyProperty360View</members>
-    <name>AuraDefinitionBundle</name>
-</types>
-    <version>63.0</version>
+	<types>
+		<members>Account_Record_Page</members>
+		<members>Opportunity_Record_Page</members>
+		<name>FlexiPage</name>
+	</types>
+	<version>66.0</version>
 </Package>
