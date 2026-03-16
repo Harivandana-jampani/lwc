@@ -5,5 +5,10 @@
 		<members>Opportunity_Record_Page</members>
 		<name>FlexiPage</name>
 	</types>
+	<types>
+		<members>Account_Support_Links</members>
+		<members>Opportunity_Support_Links</members>
+		<name>Flow</name>
+	</types>
 	<version>66.0</version>
 </Package>
