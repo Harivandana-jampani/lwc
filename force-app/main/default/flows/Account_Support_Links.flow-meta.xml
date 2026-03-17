@@ -24,7 +24,7 @@
                 <leftValueReference>Types_Support</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Ignition</stringValue>
+                    <stringValue>Ignition1</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -39,7 +39,7 @@
                 <leftValueReference>Types_Support</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Opportunity and Enablement Support</stringValue>
+                    <stringValue>Opportunity and Engagement Support</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -192,7 +192,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Ignition</name>
-                    <fieldText>&lt;p&gt;{!$Label.Display_this_description_when_selected_whether_coming_from_Account_or_Opportunit}{!$Label.gnition_Label}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;{!$Label.gnition_Label}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <styleProperties>
                         <verticalAlignment>
@@ -208,14 +208,14 @@
                             <leftValueReference>Types_Support</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>Ignition</stringValue>
+                                <stringValue>Ignition1</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
                 </fields>
                 <fields>
                     <name>DRB</name>
-                    <fieldText>&lt;p&gt;{!$Label.Display_this_description_when_selected_whether_coming_from_Account_or_Opportunit}{!$Label.Deal_Review_Board_DRB_Label}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;{!$Label.Deal_Review_Board_DRB_Label}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <styleProperties>
                         <verticalAlignment>
@@ -238,7 +238,7 @@
                 </fields>
                 <fields>
                     <name>Opportunity_Investment</name>
-                    <fieldText>&lt;p&gt;{!$Label.Display_this_description_when_selected_whether_coming_from_Account_or_Opportunit}{!$Label.Opportunity_Investment_Label}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;{!$Label.Opportunity_Investment_Label}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <styleProperties>
                         <verticalAlignment>
@@ -261,7 +261,7 @@
                 </fields>
                 <fields>
                     <name>SES</name>
-                    <fieldText>&lt;p&gt;{!$Label.Display_this_description_when_selected_whether_coming_from_Account_or_Opportunit}{!$Label.Sales_Enablement_and_Support_Label}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;{!$Label.Sales_Enablement_and_Support_Label}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <styleProperties>
                         <verticalAlignment>
@@ -284,7 +284,7 @@
                 </fields>
                 <fields>
                     <name>OES</name>
-                    <fieldText>&lt;p&gt;{!$Label.Display_this_description_when_selected_whether_coming_from_Account_or_Opportunit}{!$Label.Opportunity_and_Engagement_Support_Label}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;{!$Label.Opportunity_and_Engagement_Support_Label}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <styleProperties>
                         <verticalAlignment>
@@ -334,7 +334,7 @@
             <targetReference>Get_Account_Records</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>Deal_Review_Board</name>
         <label>Deal Review Board</label>
