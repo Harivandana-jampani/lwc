@@ -24,7 +24,7 @@
                 <leftValueReference>Types_Support</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Ignition</stringValue>
+                    <stringValue>Ignition1</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -39,11 +39,11 @@
                 <leftValueReference>Types_Support</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Opportunity and Enablement Support</stringValue>
+                    <stringValue>Opportunity and Engagement Support</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>OES_Flow</targetReference>
+                <targetReference>OESupport</targetReference>
             </connector>
             <label>OES Type</label>
         </rules>
@@ -350,8 +350,8 @@
         <flowName>Ignition_Flow</flowName>
     </subflows>
     <subflows>
-        <name>OES_Flow</name>
-        <label>OES Flow</label>
+        <name>OESupport</name>
+        <label>OES</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <flowName>Opportunity_and_Engagement_Support_FLow</flowName>
