@@ -312,6 +312,12 @@
                 <identifier>RecordMatch_Billing_Address__cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Member_Firm__c</fieldItem>
+                <identifier>RecordMember_Firm__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-50db7182-8f06-4bf4-9c7b-5c6f1c84c07d</name>
         <type>Facet</type>
     </flexiPageRegions>
